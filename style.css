@@ -1,13 +1,24 @@
-html {
-  position: relative;
-  min-height: 100%;
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-body {
-  font-family: "Trispace", sans-serif;
+.content {
+  display: flex;
 }
-.title {
+.settings {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  flex: 1;
-  font-size: 80px;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+.board {
+  width: 500px;
+  height: 500px;
+  display: grid;
 }

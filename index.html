@@ -15,6 +15,33 @@
     <title>Etch-a-Sketch</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <div class="flex-container">
+      <div class="title"><h1>SketchPad</h1></div>
+      <div class="content">
+        <div class="settings">
+          <h1>Settings</h1>
+          <div class="buttons">
+            <button class="black">Black</button>
+            <button class="white">White</button>
+            <button class="random">Random</button>
+            <button class="reset">Reset</button>
+          </div>
+          <div class="userInput">
+            <div class="sliderOutput"></div>
+            <input
+              type="range"
+              class="slider"
+              value="16"
+              min="1"
+              max="64"
+              step="1"
+              onchange="changeSize(this.value)"
+            />
+          </div>
+        </div>
+        <div class="board"></div>
+      </div>
+    </div>
   </body>
+  <script src="script.js"></script>
 </html>
