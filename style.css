@@ -1,9 +1,13 @@
-body {
-  display: flex;
-  justify-content: center;
-  font-family: "Trispace", sans-serif;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
+body {
+  font-family: "Trispace", sans-serif;
+}
 .title {
-  font-size: 48px;
+  text-align: center;
+  flex: 1;
+  font-size: 80px;
 }
