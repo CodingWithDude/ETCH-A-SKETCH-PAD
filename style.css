@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Trispace", sans-serif;
+}
+
+.title {
+  font-size: 48px;
+}
