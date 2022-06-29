@@ -22,20 +22,31 @@ const settings = document.createElement("div");
 settings.className = "settings";
 main.append(settings);
 
+// Create slider container
+const sliderContainer = document.createElement("div");
+sliderContainer.className = "sliderContainer";
+settings.append(sliderContainer);
+
 // Create slider value text
 const sliderValue = document.createElement("div");
 sliderValue.className = "sliderValue";
-sliderValue.textContent = "1x1";
-settings.append(sliderValue);
+sliderValue.innerHTML = "16 x 16";
+sliderContainer.append(sliderValue);
 
 // Create slider in settings
-const Slider = document.createElement("input");
-Slider.className = "Slider";
-Slider.type = "range";
-Slider.value = "16";
-Slider.min = "1";
-Slider.max = "64";
-settings.append(Slider);
+const slider = document.createElement("input");
+slider.className = "slider";
+slider.type = "range";
+slider.value = "16";
+slider.min = "1";
+slider.max = "64";
+sliderContainer.append(slider);
+
+// Function to update slider value text
+let sliderOutput = document.getElementsByClassName("sliderValue");
+slider.oninput = function () {
+  sliderValue.innerHTML = slider.value + " x " + slider.value;
+};
 
 // Create grid
 const grid = document.createElement("div");
