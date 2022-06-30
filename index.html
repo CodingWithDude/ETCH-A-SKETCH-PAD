@@ -16,23 +16,23 @@
   </head>
   <body>
     <div class="flex-container">
-      <div class="title"><h1>SketchPad</h1></div>
+      <div class="title">SketchPad</div>
       <div class="content">
         <div class="settings">
-          <h1>Settings</h1>
           <div class="buttons">
-            <button class="black" onclick="changeColor('black')">Black</button>
-            <button class="grey" onclick="changeColor('grey')">Grey</button>
+            <input type="color" class="colorPicker" value="#333333" />
+            <button class="black" onclick="changeColor('black')">
+              Color Mode
+            </button>
             <button class="eraser" onclick="changeColor('white')">
               Eraser
             </button>
-            <button class="random" onclick="changeColor('random')">
+            <button class="rainbow" onclick="changeColor('rainbow')">
               Rainbow
             </button>
-            <button class="reset" onclick="resetBoard()">Reset</button>
+            <button class="clear" onclick="clearBoard()">Clear</button>
           </div>
           <div class="userInput">
-            <div class="gridtext">Grid Size</div>
             <div class="sliderOutput"></div>
             <input
               type="range"

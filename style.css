@@ -1,28 +1,84 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  font-family: "Trispace", sans-serif;
+}
+
 .flex-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 96px;
+  font-size: 78px;
+  margin-bottom: 24px;
+  margin-left: 225px;
+  margin-top: 24px;
 }
 
 .content {
   display: flex;
 }
+
 .settings {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 24px;
-  margin: 16px;
+  margin: 0 48px;
+}
+
+button,
+input[type="color"] {
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+input[type="color"]:hover {
+  transform: scale(1.05);
+}
+
+input[type="color"]:active {
+  transition: transform 0.05s ease-in-out;
+  transform: scale(1);
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  width: 80px;
+  height: 80px;
+  border: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.sliderOutput {
+  font-size: 24px;
+  margin-bottom: 4px;
 }
 .board {
   width: 500px;
@@ -32,4 +88,10 @@
 
 .board {
   user-select: none;
+}
+
+button {
+  padding: 12px;
+  border-radius: 5px;
+  width: 130px;
 }

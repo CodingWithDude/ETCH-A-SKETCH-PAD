@@ -34,18 +34,21 @@ function changeSize(input) {
 
 function colorSquare(e) {
   if (e.type === "mouseover" && !mouseDown) return;
-  if (color === "random") {
+  if (color === "rainbow") {
     this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
   } else {
     this.style.backgroundColor = color;
   }
 }
 
+const colorPicker = document.querySelector(".colorPicker");
+colorPicker.oninput = (e) => changeColor(e.target.value);
+
 function changeColor(choice) {
   color = choice;
 }
 
-function resetBoard() {
+function clearBoard() {
   let board = document.querySelector(".board");
   let squares = board.querySelectorAll("div");
   squares.forEach((div) => (div.style.backgroundColor = "white"));
