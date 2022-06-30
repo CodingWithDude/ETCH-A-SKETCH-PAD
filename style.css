@@ -29,3 +29,7 @@
   height: 500px;
   display: grid;
 }
+
+.board {
+  user-select: none;
+}

@@ -1,5 +1,9 @@
 let color = "black";
 
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
 function populateBoard(size) {
   let board = document.querySelector(".board");
   let squares = board.querySelectorAll("div");
@@ -15,8 +19,9 @@ function populateBoard(size) {
   for (let i = 0; i < amount; i++) {
     let square = document.createElement("div");
     square.addEventListener("mouseover", colorSquare);
+    square.addEventListener("mousedown", colorSquare);
     square.style.backgroundColor = "white";
-    square.style.border = ".5px solid lightgrey";
+    square.style.border = "1px solid lightgrey";
     board.insertAdjacentElement("beforeend", square);
   }
 }
@@ -27,10 +32,8 @@ function changeSize(input) {
   populateBoard(input);
 }
 
-// Default board
-populateBoard(16);
-
-function colorSquare() {
+function colorSquare(e) {
+  if (e.type === "mouseover" && !mouseDown) return;
   if (color === "random") {
     this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
   } else {
@@ -47,3 +50,6 @@ function resetBoard() {
   let squares = board.querySelectorAll("div");
   squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
+
+// Default board
+populateBoard(16);
