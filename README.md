@@ -2,11 +2,16 @@
 
 A Etch-a-Sketch and Sketchpad hybrid project from The Odin Project
 
-Project goals:
-Create a grid based on user input max of 100x100 within a fixed pixel size
-Total space grid takes stays the same
-When user clicks and drags mouse have it change color of grid square
-Clear grid button
-Shading button (potential with user selected gradient)
-Choose color button
-Random rainbow color button
+What I learned:
+
+A bit on how the grid property works in css
+A LOT on how events work and how to setup mouse dragging coloring
+Learned how to disable the "Drag" of the gird itself
+How to add in a slider for input and grab the value
+How to use a function to create user inputed elements
+
+Things I want to improve:
+
+I would like to work on @media queries to make it more mobile friendly
+Would also then need to figure out how to take touch input to draw on grid
+Maybe come back and spruce up the css, but I like that it looks clean
